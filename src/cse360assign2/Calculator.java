@@ -10,12 +10,18 @@ public class Calculator {
 	private int total;
 	
 	/**
+	 * The running history of all operations on this calculator.
+	 */
+	private String history;
+
+	/**
 	 * Constructs a new Calculator instance.
 	 * 
 	 * Each instance maintains its own internal total.
 	 */
 	public Calculator () {
-		total = 0;  // not needed - included for clarity
+		total = 0;
+		history = "0";
 	}
 	
 	/**
@@ -34,6 +40,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total += value;
+		history += " + " + value;
 	}
 	
 	/**
@@ -43,6 +50,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total -= value;
+		history += " - " + value;
 	}
 	
 	/**
@@ -52,6 +60,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total *= value;
+		history += " * " + value;
 	}
 	
 	/**
@@ -67,6 +76,8 @@ public class Calculator {
 		} else {
 			total /= value;
 		}
+
+		history += " / " + value;
 	}
 	
 	/**
@@ -75,6 +86,6 @@ public class Calculator {
 	 * @return History string in the order arithmetic was run, earliest first.
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
