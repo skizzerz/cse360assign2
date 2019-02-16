@@ -1,4 +1,4 @@
-package cse360assign3;
+package cse360assign2;
 
 /**
  * Exposes methods to perform simple arithmetic on values.
@@ -24,7 +24,7 @@ public class Calculator {
 	 * @return The current total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -33,7 +33,7 @@ public class Calculator {
 	 * @param value Value to add
 	 */
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/**
@@ -42,7 +42,7 @@ public class Calculator {
 	 * @param value Value to subtract
 	 */
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class Calculator {
 	 * @param value Value to multiply by
 	 */
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	/**
@@ -62,7 +62,11 @@ public class Calculator {
 	 * @param value Value to divide by
 	 */
 	public void divide (int value) {
-		
+		if (value == 0) {
+			total = 0;
+		} else {
+			total /= value;
+		}
 	}
 	
 	/**
