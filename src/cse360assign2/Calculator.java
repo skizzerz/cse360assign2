@@ -1,3 +1,7 @@
+// Ryan Schmidt - 544
+// Assignment 2
+// Provides a simplistic calculator
+
 package cse360assign2;
 
 /**
